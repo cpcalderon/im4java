@@ -13,20 +13,24 @@
 !toolName=gs
 #
 -v|version
--dAlignToPixels|alignToPixels Integer:size
--dBackgroundColor|backgroundColor String:color
+-dAlignToPixels=|alignToPixels Integer:size
+-dBackgroundColor=|pngAlphaBackgroundColor String:color
 -dBufferSpace=|bufferSpace Integer:space
+-dDEVICEWIDTHPOINTS=|deviceWidthPoints Integer:width
+-dDEVICEHEIGHTPOINTS=|deviceHeightPoints Integer:height
 -dEPSCrop|epsCrop
 -dEPSFitPage|epsFitPage
 -dFirstPage=|pdfFirstPage Integer:page
+-dFIXEDMEDIA|fixedMedia
 -dLastPage=|pdfLastPage Integer:page
--dMaxBitmap|maxBitmap Integer:size
+-dMaxBitmap=|maxBitmap Integer:size
 -dNumRenderingThreads=|numRenderingThreads Integer:number
 -dPDFFitPage|pdfFitPage
+-dPDFSETTINGS=|pdfSettings String:settingsEnum
 -dPrinted|usePdfPrintOptions
 -dPrinted=false|usePdfScreenOptions
 -dTextAlphaBits=|textAlphaBits Integer:bits
--dShowAnnots=false|pdfHad
+-dShowAnnots=false|pdfIgnoreAnnots
 -dGraphicsAlphaBits=|graphicsAlphaBits Integer:bits
 -dQUIET|quiet
 -dUseCropBox|usePdfCropBox
