@@ -252,7 +252,8 @@ abstract public class AbstractScriptGenerator implements ScriptGenerator {
 	  // standard case: add token to buffer
 	} else {
 	  opBuffer.append(quote(token));
-	}
+      opBuffer.append(" ");
+    }
       }
     }
     flushBuffer(opBuffer);
