@@ -22,8 +22,6 @@
 package org.im4java.core;
 
 import java.util.*;
-import java.io.*;
-
 import org.im4java.process.ArrayListOutputConsumer;
 
 /**

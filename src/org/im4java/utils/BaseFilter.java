@@ -22,7 +22,6 @@
 package org.im4java.utils;
 
 import java.io.*;
-import java.util.*;
 
 /**
    This is the base class of all FilenameFilters in this package. It provides

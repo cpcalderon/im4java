@@ -21,9 +21,6 @@
 
 package org.im4java.core;
 
-import java.util.*;
-import java.io.*;
-
 /**
    This class is the base class of all im4java -exceptions.
 

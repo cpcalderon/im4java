@@ -65,7 +65,7 @@ public class GSOps extends Operation {
   //////////////////////////////////////////////////////////////////////////////
 
   /**
-     Add option -dAlignToPixels= to the gs commandline
+     Add option -dAlignToPixels to the gs commandline
      (see the documentation of gs for details).
   */
 
@@ -73,7 +73,7 @@ public class GSOps extends Operation {
 
     String       oper;                      // only used in some methods
     StringBuffer buf = new StringBuffer();  // local buffer for option-args
-    buf.append("-dAlignToPixels=");
+    iCmdArgs.add("-dAlignToPixels");
 
     if (size != null) {
       buf.append(size.toString());
@@ -87,15 +87,15 @@ public class GSOps extends Operation {
   //////////////////////////////////////////////////////////////////////////////
 
   /**
-     Add option -dBackgroundColor= to the gs commandline
+     Add option -dBackgroundColor to the gs commandline
      (see the documentation of gs for details).
   */
 
-  public GSOps pngAlphaBackgroundColor(String color) {
+  public GSOps backgroundColor(String color) {
 
     String       oper;                      // only used in some methods
     StringBuffer buf = new StringBuffer();  // local buffer for option-args
-    buf.append("-dBackgroundColor=");
+    iCmdArgs.add("-dBackgroundColor");
 
     if (color != null) {
       buf.append(color.toString());
@@ -121,50 +121,6 @@ public class GSOps extends Operation {
 
     if (space != null) {
       buf.append(space.toString());
-    }
-    if (buf.length()>0) {
-      iCmdArgs.add(buf.toString());
-    }
-    return this;
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  /**
-     Add option -dDEVICEWIDTHPOINTS= to the gs commandline
-     (see the documentation of gs for details).
-  */
-
-  public GSOps deviceWidthPoints(Integer width) {
-
-    String       oper;                      // only used in some methods
-    StringBuffer buf = new StringBuffer();  // local buffer for option-args
-    buf.append("-dDEVICEWIDTHPOINTS=");
-
-    if (width != null) {
-      buf.append(width.toString());
-    }
-    if (buf.length()>0) {
-      iCmdArgs.add(buf.toString());
-    }
-    return this;
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  /**
-     Add option -dDEVICEHEIGHTPOINTS= to the gs commandline
-     (see the documentation of gs for details).
-  */
-
-  public GSOps deviceHeightPoints(Integer height) {
-
-    String       oper;                      // only used in some methods
-    StringBuffer buf = new StringBuffer();  // local buffer for option-args
-    buf.append("-dDEVICEHEIGHTPOINTS=");
-
-    if (height != null) {
-      buf.append(height.toString());
     }
     if (buf.length()>0) {
       iCmdArgs.add(buf.toString());
@@ -235,25 +191,6 @@ public class GSOps extends Operation {
   //////////////////////////////////////////////////////////////////////////////
 
   /**
-     Add option -dFIXEDMEDIA to the gs commandline
-     (see the documentation of gs for details).
-  */
-
-  public GSOps fixedMedia() {
-
-    String       oper;                      // only used in some methods
-    StringBuffer buf = new StringBuffer();  // local buffer for option-args
-    iCmdArgs.add("-dFIXEDMEDIA");
-
-    if (buf.length()>0) {
-      iCmdArgs.add(buf.toString());
-    }
-    return this;
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  /**
      Add option -dLastPage= to the gs commandline
      (see the documentation of gs for details).
   */
@@ -276,7 +213,7 @@ public class GSOps extends Operation {
   //////////////////////////////////////////////////////////////////////////////
 
   /**
-     Add option -dMaxBitmap= to the gs commandline
+     Add option -dMaxBitmap to the gs commandline
      (see the documentation of gs for details).
   */
 
@@ -284,7 +221,7 @@ public class GSOps extends Operation {
 
     String       oper;                      // only used in some methods
     StringBuffer buf = new StringBuffer();  // local buffer for option-args
-    buf.append("-dMaxBitmap=");
+    iCmdArgs.add("-dMaxBitmap");
 
     if (size != null) {
       buf.append(size.toString());
@@ -330,28 +267,6 @@ public class GSOps extends Operation {
     StringBuffer buf = new StringBuffer();  // local buffer for option-args
     iCmdArgs.add("-dPDFFitPage");
 
-    if (buf.length()>0) {
-      iCmdArgs.add(buf.toString());
-    }
-    return this;
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  /**
-     Add option -dPDFSETTINGS= to the gs commandline
-     (see the documentation of gs for details).
-  */
-
-  public GSOps pdfSettings(String settingsEnum) {
-
-    String       oper;                      // only used in some methods
-    StringBuffer buf = new StringBuffer();  // local buffer for option-args
-    buf.append("-dPDFSETTINGS=");
-
-    if (settingsEnum != null) {
-      buf.append(settingsEnum.toString());
-    }
     if (buf.length()>0) {
       iCmdArgs.add(buf.toString());
     }
@@ -425,7 +340,7 @@ public class GSOps extends Operation {
      (see the documentation of gs for details).
   */
 
-  public GSOps pdfIgnoreAnnots() {
+  public GSOps pdfHad() {
 
     String       oper;                      // only used in some methods
     StringBuffer buf = new StringBuffer();  // local buffer for option-args

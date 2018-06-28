@@ -23,7 +23,6 @@ package org.im4java.test;
 
 import org.im4java.core.*;
 import org.im4java.process.*;
-import org.im4java.utils.*;
 
 /**
    This class implements a test for the IM compare command.
@@ -83,6 +82,7 @@ public class TestCase24 extends AbstractTestCase {
     cmpOp.addImage();
     cmpOp.metric("RMSE");  // root mean squared (normalized root mean squared)
     cmpOp.addImage();
+    
     compare.run(cmpOp,iImageDir+"firelily.jpg",
                       iImageDir+"firelily-sharpen.jpg",
                       iImageDir+"firelily-diff.jpg");

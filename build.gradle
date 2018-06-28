@@ -2,20 +2,16 @@ apply plugin: 'java'
 apply plugin: 'maven'
 
 group = 'im4java'
-version = '1.3.4'
+version = '1.3.3-SNAPSHOT'
 
 sourceCompatibility = 1.6
 targetCompatibility = 1.6
 
 uploadArchives {
     repositories.mavenDeployer {
-      repository(url: 'https://widen.jfrog.io/widen/libs-releases-thirdparty') {
-          authentication(userName: USER, password: PASSWORD)
-      }
-
-      snapshotRepository(url: 'https://widen.jfrog.io/widen/libs-snapshots-thirdparty') {
-          authentication(userName: USER, password: PASSWORD)
-      }
+        snapshotRepository(url: 'https://widen.artifactoryonline.com/widen/libs-snapshots-thirdparty') {
+            authentication(userName: 'cpcalderon', password: 'Sevilla5**')
+        }
     }
 }
 
@@ -42,3 +38,4 @@ task sourcesJar(type: Jar) {
 artifacts {
     archives sourcesJar
 }
+
