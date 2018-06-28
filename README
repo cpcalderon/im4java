@@ -30,3 +30,11 @@ FEEDBACK
 Any feedback (bug-reports, suggestions, criticism) is welcome. 
 Currently, JMagick and im4java share a single mailing-list. You should
 register to the jmagick-users mailing-list at jmagick.sourceforge.net.
+
+IMPROVEMENTS
+========
+Added error control to ImageCommand.java when the error was null
+Added setThreshold(double threshold) to set the desired threshold for discerning if the image is sufficiently similar (defaults at 0.008)
+Added double getThreshold() to receive the actual threshold value
+Added double getComparisonValue() returns the comparison value, the lower it is the more similar the images are.
+Added boolean isOverThreshold() returns if the comparison value is over the threshold (images are too different).
