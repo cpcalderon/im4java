@@ -10,7 +10,8 @@ targetCompatibility = 1.6
 uploadArchives {
     repositories.mavenDeployer {
         snapshotRepository(url: 'https://widen.artifactoryonline.com/widen/libs-snapshots-thirdparty') {
-            authentication(userName: 'cpcalderon', password: 'Sevilla5**')
+            // don't commit the password here
+            authentication(userName: 'cpcalderon', password: '*********')
         }
     }
 }
