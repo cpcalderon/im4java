@@ -11914,6 +11914,30 @@ public class IMOps extends Operation {
   //////////////////////////////////////////////////////////////////////////////
 
   /**
+     Add option -resize % to the ImageMagick commandline
+     (see the documentation of ImageMagick for details).
+  */
+
+  public IMOps percentageResize(Integer width) {
+
+    String       oper;                      // only used in some methods
+    StringBuffer buf = new StringBuffer();  // local buffer for option-args
+    iCmdArgs.add("-resize");
+
+    if (width != null) {
+      buf.append(width.toString());
+      buf.append("%");
+    }
+    if (buf.length()>0) {
+      iCmdArgs.add(buf.toString());
+    }
+    return this;
+  }
+
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  /**
      Add option -resize to the ImageMagick commandline
      (see the documentation of ImageMagick for details).
   */
